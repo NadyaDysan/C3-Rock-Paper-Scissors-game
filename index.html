@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <section class="game">
+
+        <form class="enter_form" action="">
+            <h1 class="game_name">Rock Paper Scissors</h1>
+            <input class="enter_form_login" type="text" name="login" id="" placeholder="Enter your login">
+            <input class="enter_form_submit" type="submit" value="Submit">
+        </form>
+
+        <div class="waiting_room hidden">
+            <h1 class="game_name">Rock Paper Scissors</h1>
+            <div class="player_names"></div>
+            <button>Let's play</button>
+        </div>
+
+        <div class="score hidden">
+            <div class="player-score">
+                <h2 class="player-name">Player</h2>
+                <p>0</p>
+            </div>
+            <div class="computer-score">
+                <h2>Computer</h2>
+                <p>0</p>
+            </div>
+        </div>
+
+        <div class="match hidden">
+            <h2 class="winner">Choose an option</h2>
+            <div class="hands">
+                <img class="player-hand" src="./lib/img/hand-rock.svg" alt="">
+                <img class="computer-hand" src="./lib/img/hand-rock.svg" alt="">
+            </div>
+            <div class="options">
+                <button class="rock">rock</button>
+                <button class="paper">paper</button>
+                <button class="scissors">scissors</button>
+            </div>
+        </div>
+    </section>
+
+    <script src="game.js"></script>
+    <script src="main.js"></script>
+
+
+</body>
+
+</html>
