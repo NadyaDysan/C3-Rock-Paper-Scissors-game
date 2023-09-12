@@ -26,6 +26,16 @@ enterForm.addEventListener("submit", event => {
                 localStorage.setItem('login', playerName);
                 localStorage.setItem('token', token);
 
+                function renderPlayerNames() {
+                    const playerName = document.querySelector(".player-name");
+                    const playerNames = document.querySelector(".player_names");
+                
+                    playerNames.textContent = document.querySelector(".enter_form_login").value;
+                    playerName.textContent = document.querySelector(".enter_form_login").value;
+                };
+                
+                renderPlayerNames();
+
                 xhr.onerror = function () {
                     alert('Request failed');
                 };
@@ -33,30 +43,3 @@ enterForm.addEventListener("submit", event => {
         };
     };
 });
-
-
-window.application = {
-    blocks: {},
-    screens: {},
-    renderScreen: function(screenName) {},
-    renderBlock: function(blockName, container) {},
-    timers: []
-  }
-
-  let userName = localStorage.getItem('login');
-  let token = localStorage.getItem('token');
-  application.player = {
-    name: userName,
-    token: token,
-  }
-
-
-  function renderPlayerNames() {
-    const playerName = document.querySelector(".player-name");
-    const playerNames = document.querySelector(".player_names");
-
-    playerNames.textContent = userName;
-    playerName.textContent = userName;
-};
-
-renderPlayerNames();
